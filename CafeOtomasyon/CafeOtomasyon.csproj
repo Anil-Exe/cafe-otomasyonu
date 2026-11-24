@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCF9DD3A-B904-4DE8-B1FD-B250967C7298}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CafeOtomasyon</RootNamespace>
+    <AssemblyName>CafeOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BirimTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BirimTanimlamaForm.Designer.cs">
+      <DependentUpon>BirimTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KategoriTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KategoriTanimlamaForm.Designer.cs">
+      <DependentUpon>KategoriTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeTuruTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeTuruTanimlamaForm.Designer.cs">
+      <DependentUpon>OdemeTuruTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaKonumTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaKonumTanimlamaForm.Designer.cs">
+      <DependentUpon>MasaKonumTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaDurumTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaDurumTanimlamaForm.Designer.cs">
+      <DependentUpon>MasaDurumTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelRolTanimlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelRolTanimlamaForm.Designer.cs">
+      <DependentUpon>PersonelRolTanimlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TanimlamaYardimci.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarsonSiparisIslemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarsonSiparisIslemForm.Designer.cs">
+      <DependentUpon>GarsonSiparisIslemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunSonuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunSonuForm.Designer.cs">
+      <DependentUpon>GunSonuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunSonuSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunSonuSilForm.Designer.cs">
+      <DependentUpon>GunSonuSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaDurumTakipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaDurumTakipForm.Designer.cs">
+      <DependentUpon>MasaDurumTakipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaGuncelleForm.Designer.cs">
+      <DependentUpon>MasaGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaListesiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaListesiForm.Designer.cs">
+      <DependentUpon>MasaListesiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasaSilOnayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasaSilOnayForm.Designer.cs">
+      <DependentUpon>MasaSilOnayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeAlmaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeAlmaForm.Designer.cs">
+      <DependentUpon>OdemeAlmaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeGuncelleForm.Designer.cs">
+      <DependentUpon>OdemeGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeSilForm.Designer.cs">
+      <DependentUpon>OdemeSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oturum.cs" />
+    <Compile Include="PersonelGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelleForm.Designer.cs">
+      <DependentUpon>PersonelGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelListeForm.Designer.cs">
+      <DependentUpon>PersonelListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSifreSifirlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSifreSifirlamaForm.Designer.cs">
+      <DependentUpon>PersonelSifreSifirlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSilOnayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSilOnayForm.Designer.cs">
+      <DependentUpon>PersonelSilOnayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelRaporForm.Designer.cs">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokRaporForm.Designer.cs">
+      <DependentUpon>StokRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaporlamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporlamaForm.Designer.cs">
+      <DependentUpon>RaporlamaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervasyonForm.Designer.cs">
+      <DependentUpon>RezervasyonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervasyonGuncelleForm.Designer.cs">
+      <DependentUpon>RezervasyonGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervasyonSilForm.Designer.cs">
+      <DependentUpon>RezervasyonSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SahsiKasaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SahsiKasaForm.Designer.cs">
+      <DependentUpon>SahsiKasaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SahsiKasaGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SahsiKasaGuncelleForm.Designer.cs">
+      <DependentUpon>SahsiKasaGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SahsiKasaSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SahsiKasaSilForm.Designer.cs">
+      <DependentUpon>SahsiKasaSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisForm.Designer.cs">
+      <DependentUpon>SiparisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisListeForm.Designer.cs">
+      <DependentUpon>SiparisListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokForm.Designer.cs">
+      <DependentUpon>StokForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokGuncelleForm.Designer.cs">
+      <DependentUpon>StokGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokSilOnayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokSilOnayForm.Designer.cs">
+      <DependentUpon>StokSilOnayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunRaporForm.Designer.cs">
+      <DependentUpon>UrunRaporForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BirimTanimlamaForm.resx">
+      <DependentUpon>BirimTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KategoriTanimlamaForm.resx">
+      <DependentUpon>KategoriTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeTuruTanimlamaForm.resx">
+      <DependentUpon>OdemeTuruTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasaKonumTanimlamaForm.resx">
+      <DependentUpon>MasaKonumTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasaDurumTanimlamaForm.resx">
+      <DependentUpon>MasaDurumTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelRolTanimlamaForm.resx">
+      <DependentUpon>PersonelRolTanimlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GarsonSiparisIslemForm.resx">
+      <DependentUpon>GarsonSiparisIslemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunSonuForm.resx">
+      <DependentUpon>GunSonuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunSonuSilForm.resx">
+      <DependentUpon>GunSonuSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasaDurumTakipForm.resx">
+      <DependentUpon>MasaDurumTakipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasaListesiForm.resx">
+      <DependentUpon>MasaListesiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasaSilOnayForm.resx">
+      <DependentUpon>MasaSilOnayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeAlmaForm.resx">
+      <DependentUpon>OdemeAlmaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeGuncelleForm.resx">
+      <DependentUpon>OdemeGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeSilForm.resx">
+      <DependentUpon>OdemeSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelListeForm.resx">
+      <DependentUpon>PersonelListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSifreSifirlamaForm.resx">
+      <DependentUpon>PersonelSifreSifirlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSilOnayForm.resx">
+      <DependentUpon>PersonelSilOnayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PersonelRaporForm.resx">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokRaporForm.resx">
+      <DependentUpon>StokRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporlamaForm.resx">
+      <DependentUpon>RaporlamaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervasyonForm.resx">
+      <DependentUpon>RezervasyonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervasyonGuncelleForm.resx">
+      <DependentUpon>RezervasyonGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervasyonSilForm.resx">
+      <DependentUpon>RezervasyonSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SahsiKasaForm.resx">
+      <DependentUpon>SahsiKasaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SahsiKasaGuncelleForm.resx">
+      <DependentUpon>SahsiKasaGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SahsiKasaSilForm.resx">
+      <DependentUpon>SahsiKasaSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisForm.resx">
+      <DependentUpon>SiparisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisListeForm.resx">
+      <DependentUpon>SiparisListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokForm.resx">
+      <DependentUpon>StokForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokGuncelleForm.resx">
+      <DependentUpon>StokGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokSilOnayForm.resx">
+      <DependentUpon>StokSilOnayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunRaporForm.resx">
+      <DependentUpon>UrunRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="CafeOtomasyonDB_TanimlamaTablolari.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ipod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
