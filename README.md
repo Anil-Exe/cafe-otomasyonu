@@ -12,6 +12,10 @@
 
 C# Windows Forms ve SQL Server ile geliştirilmiş akademik masa/sipariş yönetimi uygulaması.
 
+## Proje bağlamı
+
+Üniversite eğitimi sırasında geliştirilen bir masaüstü uygulaması prototipidir. Windows Forms, ilişkisel veritabanı işlemleri ve temel işletme akışlarını birlikte uygulamaya odaklanır. Canlı bir işletme ürünü olarak sunulmaz.
+
 ## Kaynakta bulunan ekranlar
 
 - Masa, sipariş ve ödeme yönetimi
@@ -30,9 +34,9 @@ C#, Windows Forms, .NET Framework 4.7.2, SQL Server. Visual Studio çözümü ve
 3. Kendi yerel SQL Server ortamınızı kurun. Gerçek MDF/LDF yedekleri bu kopyaya eklenmemiştir.
 4. `CAFE_DB_CONNECTION_STRING` ortam değişkenini kendi bağlantınızla ayarlayın. Yerel sunucu/kullanıcı/bağlantı değerlerini kaynak koduna eklemeyin.
 
-## Güvenlik ve kurulum engelleri
+## Teknik durum ve geliştirme alanları
 
-Bu proje henüz public yayıma veya canlı kullanıma hazır değildir:
+Eğitim prototipindeki aşağıdaki alanlar, gerçek personel verileriyle veya canlı işletme ortamında kullanım öncesinde geliştirilmelidir:
 
 - Özgün uygulama parolaları doğrudan SQL sorgularında kullanır. Güvenli hashleme, kullanıcı seçimi/doğrulaması ve rol kontrolleri bütün akışlar için düzenlenmelidir.
 - Personel ekranlarında parola sütununun sorgulandığı/gösterilebildiği eski akışlar vardır; bunlar kaldırılmalıdır.
@@ -40,4 +44,4 @@ Bu proje henüz public yayıma veya canlı kullanıma hazır değildir:
 - Mevcut SQL dosyası yalnızca tanım tabloları içindir; sıfırdan kurulum için tam, kişisel veri içermeyen veritabanı şeması ayrıca gereklidir.
 - Bu ortamda Windows/.NET Framework olmadığı için derleme ve SQL Server entegrasyon testi yapılmadı.
 
-Özgün arşiv korunmuştur. Bu çalışma kopyası yalnızca inceleme içindir; kimlik doğrulama düzenlemesi tamamlanmadan gerçek kullanıcı/personel verileriyle çalıştırılmamalıdır.
+Bu depo, akademik projenin kaynaklarını ve geliştirme yaklaşımını portföy kapsamında sunar. Gerçek kullanıcı/personel verileri içermez.
